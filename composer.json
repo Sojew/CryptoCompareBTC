@@ -1,0 +1,16 @@
+{
+    "name": "evilcorp/sojew",
+    "description": "vanilla php script",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "SoJew",
+            "email": "beendlinq1@gmail.com"
+        }
+    ],
+    "require": {
+        "google/apiclient": "2.0",
+        "php": "^7.3"
+    }
+}
