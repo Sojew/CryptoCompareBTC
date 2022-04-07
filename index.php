@@ -28,10 +28,6 @@ if($e = curl_error($cUrl)) {
 curl_close($cUrl);  // Array ( [RUB] => f [USD] => x [EUR] => y [UAH] => z)
 
 //$spreadsheeId = sanitize_text_field(trim($_POST['google_spreadsheet_id']));
-// if(
-//   !$spreadsheet_id ||
-//   strlen($spreadsheet_id) < 8
-// ) throw new \Exception("!!!");
 
 $credentialsPath = __DIR__.'/google-account-credentials.json';
 putenv('GOOGLE_APPLICATION_CREDENTIALS=' . $credentialsPath);
@@ -47,7 +43,7 @@ $parsedExchangeRates = [
 ];
 
 $requestBody = new ValueRange([ 'values' => $parsedExchangeRates ]);
-$result = $service->spreadsheets_values->append($spreadsheetId, "Sheet1", $requestBody, ['valueInputOption' => 'RAW' ], [ "insertDataOption" => "INSERT_ROWS" ]);
+$result = $service->spreadsheets_values->append($spreadsheetId, 'Sheet1', $requestBody, ['valueInputOption' => 'RAW' ], [ 'insertDataOption' => 'INSERT_ROWS' ]);
 
 printf("%d more exchange rates has been appended!", $result->getUpdates()->getUpdatedCells());
 
