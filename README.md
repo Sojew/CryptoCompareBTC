@@ -1,7 +1,7 @@
 # CryptoCompareBTC
 Cryptocompare.com integration w/ Google Sheets API (Exchange rate log).
 
-БД: https://docs.google.com/spreadsheets/d/1jvyId6Iuhar5Fjs7O6viyiL1nBorV0wxLHKuwnns4Zo/edit#gid=0.
+БД: https://docs.google.com/spreadsheets/d/1jvyId6Iuhar5Fjs7O6viyiL1nBorV0wxLHKuwnns4Zo/edit?usp=sharing.
 Для автоматизации на Unix-серверах - Crontab https://wiki.archlinux.org/title/cron.
 На Windows создал пакет start.bat и с помощью встроенного taskschd. msc запускаю index.php раз в час.
 
